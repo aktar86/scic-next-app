@@ -54,9 +54,10 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your email"
+              suppressHydrationWarning
               className="w-full px-3 py-2 text-sm rounded-l-md bg-gray-800 dark:bg-gray-900 text-white focus:outline-none"
             />
-            <button className="bg-primary px-4 py-2 text-sm text-white rounded-r-md hover:opacity-90">
+            <button suppressHydrationWarning className="bg-primary px-4 py-2 text-sm text-white rounded-r-md hover:opacity-90">
               Subscribe
             </button>
           </div>

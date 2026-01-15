@@ -28,6 +28,7 @@ const ContactSupportForm = () => {
         onChange={handleChange}
         placeholder="Your Name"
         required
+        suppressHydrationWarning
         className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
       />
       <input
@@ -37,6 +38,7 @@ const ContactSupportForm = () => {
         onChange={handleChange}
         placeholder="Your Email"
         required
+        suppressHydrationWarning
         className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
       />
       <textarea
@@ -46,12 +48,14 @@ const ContactSupportForm = () => {
         placeholder="Your Message"
         rows={5}
         required
+        suppressHydrationWarning
         className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
       ></textarea>
 
       <input
         type="submit"
         value="Send Message"
+        suppressHydrationWarning
         className="px-6 py-3 bg-teal-500 w-full font-semibold rounded-md hover:opacity-90 transition cursor-pointer"
       />
     </form>

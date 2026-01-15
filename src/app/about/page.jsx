@@ -45,9 +45,9 @@ const About = () => {
     "Corsair",
   ];
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-500 to-teal-600 text-white">
+      <section className="py-20 bg-linear-to-r from-teal-500 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
             About GadgetGrove
