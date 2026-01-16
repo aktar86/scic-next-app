@@ -9,7 +9,7 @@ const AllProducts = async () => {
   let error = null;
 
   try {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
     const res = await fetch(`${apiUrl}/products`, {
       cache: "no-store",
     });
@@ -47,15 +47,32 @@ const AllProducts = async () => {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
               Unable to Load Products
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We're having trouble connecting to the server. Please make sure the API server is running.
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              We're having trouble connecting to the server.
             </p>
-            <Link
-              href="/"
-              className="inline-block px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors"
-            >
-              Back to Home
-            </Link>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded mb-6 text-left">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <strong>API URL:</strong>{" "}
+                {process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}
+              </p>
+              <p className="text-sm text-red-600 dark:text-red-400">
+                <strong>Error:</strong> {error}
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Link
+                href="/api-test"
+                className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors mr-2"
+              >
+                Test API Connection
+              </Link>
+              <Link
+                href="/"
+                className="inline-block px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </div>
