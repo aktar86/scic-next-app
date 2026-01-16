@@ -9,7 +9,8 @@ const AllProducts = async () => {
   let error = null;
 
   try {
-    const res = await fetch("http://localhost:5000/products", {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    const res = await fetch(`${apiUrl}/products`, {
       cache: "no-store",
     });
 
