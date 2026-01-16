@@ -8,6 +8,8 @@ import WhyChooseUs from "@/components/Sections/WhyChooseUs";
 import Hero from "@/components/UI/Hero";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const Home = () => {
   return (
     <>

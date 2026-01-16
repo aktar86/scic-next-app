@@ -11,7 +11,7 @@ const getLatestProducts = async () => {
     if (!res.ok) return [];
     
     const data = await res.json();
-    const products = data.products;
+    const products = data.products || [];
     
     // Sort by createdAt date (newest first) and take first 6
     const sortedProducts = products

@@ -11,7 +11,7 @@ const getTopProducts = async () => {
     if (!res.ok) return [];
     
     const data = await res.json();
-    const products = data.products;
+    const products = data.products || [];
     
     // Get top 8 products (you can modify this logic based on your needs)
     // For now, we'll take the first 8 products, but you could sort by rating, popularity, etc.

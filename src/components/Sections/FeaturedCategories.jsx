@@ -10,7 +10,7 @@ const getFeaturedCategories = async () => {
     if (!res.ok) return [];
     
     const data = await res.json();
-    const products = data.products;
+    const products = data.products || [];
     
     // Extract unique categories with their first product image
     const categoryMap = new Map();
