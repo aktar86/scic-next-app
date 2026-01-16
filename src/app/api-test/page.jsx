@@ -18,7 +18,7 @@ export default function ApiTest() {
     setTestResult(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://scic-nex-server.onrender.com";
       const response = await fetch(`${apiUrl}/products`);
       
       if (!response.ok) {

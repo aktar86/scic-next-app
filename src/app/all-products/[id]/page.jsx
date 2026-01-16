@@ -3,7 +3,7 @@ import React from "react";
 export const dynamic = "force-dynamic";
 
 const getSingleProduct = async (id) => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://scic-nex-server.onrender.com";
   const res = await fetch(`${apiUrl}/products/${id}`, {
     cache: "no-store",
   });

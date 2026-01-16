@@ -9,7 +9,8 @@ const AllProducts = async () => {
   let error = null;
 
   try {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://scic-nex-server.onrender.com";
     const res = await fetch(`${apiUrl}/products`, {
       cache: "no-store",
     });
@@ -53,7 +54,8 @@ const AllProducts = async () => {
             <div className="bg-white dark:bg-gray-800 p-4 rounded mb-6 text-left">
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 <strong>API URL:</strong>{" "}
-                {process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}
+                {process.env.NEXT_PUBLIC_API_URL ||
+                  "https://scic-nex-server.onrender.com"}
               </p>
               <p className="text-sm text-red-600 dark:text-red-400">
                 <strong>Error:</strong> {error}
