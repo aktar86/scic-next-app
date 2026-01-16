@@ -39,10 +39,14 @@ const Login = () => {
       ) {
         // Set auth cookie
         document.cookie = "auth-token=mock-token-12345; path=/; max-age=86400"; // 24 hours
-        
+
+        // Dispatch custom event to notify navbar
+        window.dispatchEvent(new Event("authChange"));
+
         alert("Login successful! Welcome to GadgetGrove.");
         // Redirect to home page
         router.push("/");
+        router.refresh(); // Force refresh to update navbar
       } else {
         setError("Invalid email or password. Please try again.");
       }
@@ -85,7 +89,9 @@ const Login = () => {
             {error && (
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-start gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-red-700 dark:text-red-300">{error}</p>
+                <p className="text-sm text-red-700 dark:text-red-300">
+                  {error}
+                </p>
               </div>
             )}
 
@@ -188,7 +194,7 @@ const Login = () => {
           </div>
 
           {/* Social Login Buttons */}
-          <div className="mt-6 grid grid-cols-2 gap-4">
+          {/* <div className="mt-6 grid grid-cols-2 gap-4">
             <button
               type="button"
               suppressHydrationWarning
@@ -233,7 +239,7 @@ const Login = () => {
                 GitHub
               </span>
             </button>
-          </div>
+          </div> */}
 
           {/* Sign Up Link */}
           <p className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">

@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 export default function AddProduct() {
   const {
@@ -11,9 +12,28 @@ export default function AddProduct() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/products");
+
+    axios
+      .post("http://localhost:5000/products", data)
+      .then((res) => {
+        console.log(res.data);
+        console.log(res.data.insertedId);
+        if (res.data.insertedId) {
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (

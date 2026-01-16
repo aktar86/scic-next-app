@@ -14,7 +14,7 @@ const slides = [
     title: "Upgrade Your Everyday Tech",
     description:
       "Discover premium gadgets designed to make your life smarter and easier.",
-    image: "/slide1.jpg",
+    image: "https://cdn.pixabay.com/photo/2017/08/11/22/43/podcasts-2633018_1280.jpg",
     buttonText: "Shop Now",
     buttonLink: "/shop",
   },
@@ -23,7 +23,7 @@ const slides = [
     title: "Smart Devices, Smarter Living",
     description:
       "Explore modern technology built for performance, style, and comfort.",
-    image: "/slide2.jpg",
+    image: "https://cdn.pixabay.com/photo/2019/07/14/16/29/pen-4337524_1280.jpg",
     buttonText: "Shop Now",
     buttonLink: "/shop",
   },
@@ -32,7 +32,7 @@ const slides = [
     title: "Power Your Passion with Innovation",
     description:
       "From gaming to productivity, find gadgets that match your lifestyle.",
-    image: "/slide3.jpg",
+    image: "https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_1280.jpg",
     buttonText: "Shop Now",
     buttonLink: "/shop",
   },
@@ -40,7 +40,7 @@ const slides = [
 
 const Hero = () => {
   return (
-    <div className="w-full h-[500px]">
+    <div className="w-full my-5 h-150 rounded-2xl overflow-hidden">
       <Swiper
         spaceBetween={30}
         centeredSlides
@@ -78,7 +78,7 @@ const Hero = () => {
 
                   <Link
                     href={slide.buttonLink}
-                    className="bg-teal-500 px-5 p-2 rounded-2xl"
+                    className="bg-teal-500 px-5 p-2 rounded-full"
                   >
                     {slide.buttonText}
                   </Link>
