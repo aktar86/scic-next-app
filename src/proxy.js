@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export function middleware(request) {
+export function proxy(request) {
   // Check if user is authenticated (check for auth token in cookies)
   const token = request.cookies.get('auth-token');
   
