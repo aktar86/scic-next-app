@@ -2,14 +2,19 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 import Link from "next/link";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const AllProducts = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("http://localhost:5000/products", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch products");
+  }
+
   const data = await res.json();
-
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
   const products = data.products;
-  console.log(products);
 
   return (
     <div className="px-4">
