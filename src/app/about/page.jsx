@@ -44,6 +44,31 @@ const About = () => {
     "Razer",
     "Corsair",
   ];
+
+  const members = [
+    {
+      id: 1,
+      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
+      name: "Alex Johnson",
+      designation: "Founder & CEO",
+      university: "Tech visionary with 15 years of industry experience",
+    },
+    {
+      id: 2,
+      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      name: "Sarah Chen",
+      designation: "Chief Technology Officer",
+      university: "AI specialist with a focus on neural network architecture",
+    },
+    {
+      id: 3,
+      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+      name: "Marcus Rodriguez",
+      designation: "VP of Engineering",
+      university: "Infrastructure expert managing global cloud operations",
+    },
+  ];
+
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
@@ -63,7 +88,7 @@ const About = () => {
       {/* Our Story */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center ">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
                 Our Story
@@ -86,10 +111,12 @@ const About = () => {
                 should enhance every aspect of life.
               </p>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-8 h-[400px] flex items-center justify-center">
-              <p className="text-gray-500 dark:text-gray-400 text-center">
-                [Image Placeholder: Team Photo or Store Image]
-              </p>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl   flex items-center justify-center  overflow-hidden">
+              <img
+                className=" "
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -239,60 +266,32 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm">
-              <div className="h-64 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <p className="text-gray-500 dark:text-gray-400">[Photo]</p>
+          <div className="grid md:grid-cols-3  gap-8">
+            {members.map((member) => (
+              <div
+                key={member.id}
+                className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm"
+              >
+                <div className="h-80 bg-gray-200 dark:bg-gray-700 flex items-center justify-center  overflow-hidden ">
+                  <img
+                    className="w-full h-full  object-cover "
+                    src={member.img}
+                    alt={member.name}
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-teal-600 dark:text-teal-400 mb-3">
+                    {member.designation}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {member.university}
+                  </p>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
-                  Alex Johnson
-                </h3>
-                <p className="text-teal-600 dark:text-teal-400 mb-3">
-                  Founder & CEO
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Tech visionary with 15 years of industry experience
-                </p>
-              </div>
-            </div>
-
-            {/* Team Member 2 */}
-            <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm">
-              <div className="h-64 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <p className="text-gray-500 dark:text-gray-400">[Photo]</p>
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
-                  Maria Garcia
-                </h3>
-                <p className="text-teal-600 dark:text-teal-400 mb-3">
-                  Head of Operations
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Ensuring smooth operations and customer satisfaction
-                </p>
-              </div>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm">
-              <div className="h-64 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <p className="text-gray-500 dark:text-gray-400">[Photo]</p>
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
-                  David Chen
-                </h3>
-                <p className="text-teal-600 dark:text-teal-400 mb-3">
-                  Product Specialist
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Curating the best tech products for our customers
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -20,7 +20,10 @@ const ContactSupportForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-800 p-5 rounded">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 bg-white dark:bg-gray-800 p-5 rounded"
+    >
       <input
         type="text"
         name="name"
@@ -56,7 +59,7 @@ const ContactSupportForm = () => {
         type="submit"
         value="Send Message"
         suppressHydrationWarning
-        className="px-6 py-3 bg-teal-500 w-full font-semibold rounded-md hover:opacity-90 transition cursor-pointer"
+        className="px-6 py-3 text-white bg-teal-500 w-full font-semibold rounded-md hover:opacity-90 transition cursor-pointer"
       />
     </form>
   );

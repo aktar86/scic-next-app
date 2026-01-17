@@ -3,7 +3,7 @@ import React from "react";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 p-2  border dark:border-gray-700 border-gray-300 rounded flex flex-col ">
+    <div className="bg-white dark:bg-gray-900 p-2  border dark:border-gray-700 border-gray-300 rounded flex flex-col hover:-translate-y-2 transform transition-all grope duration-200 ease-in-out ">
       <img
         className="w-full h-50 object-cover"
         src={product.image}

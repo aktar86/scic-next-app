@@ -8,7 +8,7 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
-            Contact / Support
+            Contact Us
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
             Have questions or need help? Reach out to our support team anytime.
@@ -20,16 +20,26 @@ const Contact = () => {
           {/* Left: Contact Info */}
           <div className="space-y-6 px-10 flex flex-col justify-center ">
             <div>
-              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">Email</h3>
-              <p className="text-gray-600 dark:text-gray-400">support@gadgetgrove.com</p>
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                Email
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                support@gadgetgrove.com
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">Phone</h3>
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                Phone
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">+1 234 567 890</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">Address</h3>
-              <p className="text-gray-600 dark:text-gray-400">123 Tilagor, Sylhet, Bangladesh.</p>
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                Address
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                123 Tilagor, Sylhet, Bangladesh.
+              </p>
             </div>
           </div>
 

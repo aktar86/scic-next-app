@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -57,7 +58,10 @@ const Footer = () => {
               suppressHydrationWarning
               className="w-full px-3 py-2 text-sm rounded-l-md bg-gray-800 dark:bg-gray-900 text-white focus:outline-none"
             />
-            <button suppressHydrationWarning className="bg-primary px-4 py-2 text-sm text-white rounded-r-md hover:opacity-90">
+            <button
+              suppressHydrationWarning
+              className="bg-primary px-4 py-2 text-sm text-white rounded-r-md hover:opacity-90"
+            >
               Subscribe
             </button>
           </div>
@@ -72,10 +76,22 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-4">
-            <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Mail className="w-5 h-5 hover:text-white cursor-pointer" />
+            <Link href="https://www.facebook.com/aktar5436" target="_blank">
+              <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
+            </Link>
+            <Link href="https://www.instagram.com/aktar.inf7" target="_blank">
+              <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
+            </Link>
+            <Link href="https://www.x.com" target="_blank">
+              <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
+            </Link>
+
+            <Link
+              href="https://mail.google.com/mail/u/0/#inbox/FMfcgzQfBQFnHZGPKXGKDTkZGNWvNlbd?compose=new"
+              target="_blank"
+            >
+              <Mail className="w-5 h-5 hover:text-white cursor-pointer" />
+            </Link>
           </div>
         </div>
       </div>
